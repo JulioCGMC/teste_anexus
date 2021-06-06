@@ -65,14 +65,16 @@ class CommonController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string'],
         ])->validate();
-        $password = Hash::make($data['password']);
 
-        if (Auth::attempt(['name' => $data['name'], 'password' => $password])) {
+        $user = User::where('name', $data['name'])->first();
+        if ($user == null) {
             alert()->error('Usuário não encontrado');
             return redirect()->back();//->with('error', 'Usuário não encontrado');
         }
-        
-        $user = User::where('name', $data['name'])->firstOrFail();
+        if (!(Hash::check($data['password'], $user->password))) {
+            alert()->error('Senha incorreta');
+            return redirect()->back();//->with('error', 'Usuário não encontrado');
+        }
         Auth::loginUsingId($user->id);
         
         return redirect(route('common.show', $user->profile));

@@ -18,6 +18,9 @@ DB_PORT,
 DB_DATABASE,
 DB_USERNAME,
 DB_PASSWORD` para os adequados
-- A execução dos seguintes comandos em um terminal orientado na pasta raiz do projeto: `php artisan migrate --seed`, `php artisan serve` Após o segundo surgirá um link para a visualização do projeto funcionando.
+- A execução dos seguintes comandos (em ordem) em um terminal orientado na pasta raiz do projeto: `composer install`, `php artisan migrate --seed`, `php artisan storage:link`, `npm install && npm run dev`,`php artisan serve` Após o segundo surgirá um link para a visualização do projeto funcionando.
+
+## Observações
+- Todos os usuários pré-cadastrados tem como senha: 1234
 
 Muito obrigado, Julio CGMC.

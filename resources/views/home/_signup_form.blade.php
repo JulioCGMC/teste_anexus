@@ -48,7 +48,7 @@
     </div>
 
     <div class="form-group row">
-        <label for="password" class="col-md-8 col-form-label text-md-left">{{ __('Password') }}</label>
+        <label for="password" class="col-md-8 col-form-label text-md-left">{{ __('Senha') }}</label>
 
         <div class="col-md-12">
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" value="{{ old('password') }}" name="password" autocomplete="new-password">
@@ -62,7 +62,7 @@
     </div>
 
     <div class="form-group row">
-        <label for="password-confirm" class="col-md-8 col-form-label text-md-left">{{ __('Confirm Password') }}</label>
+        <label for="password-confirm" class="col-md-8 col-form-label text-md-left">{{ __('Confirmar senha') }}</label>
 
         <div class="col-md-12">
             <input id="password-confirm" type="password" class="form-control" value="{{ old('password_confirmation') }}" name="password_confirmation" autocomplete="new-password">

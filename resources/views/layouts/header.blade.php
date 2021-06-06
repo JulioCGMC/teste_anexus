@@ -1,6 +1,6 @@
 <header class="navbar navbar-expand navbar-dark text-white font-weight-bold bg-primary flex-column flex-md-row bd-navbar">
     <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-            <img src="/storage/img/style/logo.png"/>
+            <img src="http://anexus.com.br/wp-content/uploads/2020/07/header_logo.png"/>
     </a>
 
     @auth
